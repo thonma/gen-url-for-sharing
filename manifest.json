@@ -4,11 +4,17 @@
   "name": "Copy URL and more",
   "short_name": "CUAM",
   "description": "メールやチャット等で URL を送るときのテキストをコピーする",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
   "browser_action": {
-    "default_icon": "icon_32.png",
+    "default_icon": "icon48.png",
     "default_popup": "popup.html"
   },
   "permissions": [
+    "storage",
     "tabs"
   ]
 }
