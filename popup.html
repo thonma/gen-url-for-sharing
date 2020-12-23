@@ -12,19 +12,38 @@
 
     body {
       margin: 0;
-      padding: 8px;
-      width: 400px;
+      padding: 8px 16px;
+      min-width: 400px;
     }
 
-    body p {
-      text-align: center;
+    textarea {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      min-height: 3rem;
+    }
+
+    .pre {
+      padding: 8px;
+      background-color: #efefef;
+      border: .5px solid #efefef;
+      white-space: pre;
     }
   </style>
 </head>
 
 <body>
-  <p>タイトルと URL をコピーしました。</p>
-  <script src="popup.js"></script>
+  <div id="Config">
+    <label for="Fmt">フォーマット</label>&nbsp;※{{title}} と {{url}} は変更できません。
+    <textarea name="Fmt" id="Fmt"></textarea>
+  </div>
+
+  <hr>
+
+  <div id="Notice" hidden>
+    <div>以下のテキストをコピーしました。</div>
+    <div id="CopiedTxt" class="pre"></div>
+    <script src="popup.js"></script>
 </body>
 
 </html>
