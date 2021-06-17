@@ -1,6 +1,8 @@
 const FMT_CONFIG_KEY = 'FMT_CONFIG';
-const INITIAL_FMT = `■{{title}}
-{{url}}`;
+const TITLE_FMT = '__title__';
+const URL_FMT = '__url__';
+const INITIAL_FMT = `■${TITLE_FMT}
+${URL_FMT}`;
 
 window.onload = () => {
   document.querySelector('#Fmt').addEventListener('change', () => {
@@ -34,7 +36,7 @@ chrome.storage.sync.get([FMT_CONFIG_KEY], items => {
     // ==================================
     // コピペ用に整形
     // ==================================
-    const formattedText = fmt.replace('{{title}}', title).replace('{{url}}', url);
+    const formattedText = fmt.replace(TITLE_FMT, title).replace(URL_FMT, url);
 
     // ==================================
     // コピー
