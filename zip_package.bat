@@ -1,0 +1,1 @@
+"C:\Program Files\7-Zip\7z.exe" a pkg.zip popup.html popup.js manifest.json
